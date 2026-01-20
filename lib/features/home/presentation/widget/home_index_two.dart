@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import '../../../../core/common/custom_button.dart';
 import '../../controller/home_controller.dart';
+import 'home_two_widgets.dart';
 
 class HomeIndexTwo extends StatelessWidget {
   HomeIndexTwo({super.key});
@@ -13,21 +14,28 @@ class HomeIndexTwo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(12.h),
-      child: Column(
-        children: [
-          CustomButton(
-            onTap: () {
-              controller.selectedIndex.value = 0;
-            },
-            buttonColor: Color(0XFF00C0E8),
-            buttonTextColor: AppColors.white,
-            borderColor: Color(0XFF00C0E8),
-            isIcon: false,
-            title: '1st Page Navigate',
-          ),
-        ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.all(12.h),
+        child: Column(
+          children: [
+            CustomButton(
+              onTap: () {
+                controller.selectedIndex.value = 0;
+              },
+              buttonColor: Color(0XFF00C0E8),
+              buttonTextColor: AppColors.white,
+              borderColor: Color(0XFF00C0E8),
+              isIcon: true,
+              title: '1st Page Navigate',
+            ),
+            SizedBox(height: 12.h),
+            ElectricityCard(),
+            SizedBox(height: 20.h),
+            MenuButtonsGrid(),
+            SizedBox(height: 20.h),
+          ],
+        ),
       ),
     );
   }

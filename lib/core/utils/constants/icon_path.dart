@@ -24,4 +24,11 @@ class IconPath {
   static const String dc = '$_basePath/dc.png';
   static const String inverter = '$_basePath/inverter.png';
   static const String light = '$_basePath/light.png';
+  static const String solarCell = '$_basePath/solar_cell.png';
+  static const String power = '$_basePath/power.png';
+  static const String chart = '$_basePath/chart.png';
+  static const String generator = '$_basePath/generator.png';
+  static const String charge = '$_basePath/charge.png';
+  static const String fire = '$_basePath/fire.png';
+  static const String water = '$_basePath/water.png';
 }
