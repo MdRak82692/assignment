@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 class LoginController extends GetxController {
   RxBool showLogin = false.obs;
   RxBool isPasswordVisible = false.obs;
-  
-  final  usernameController = TextEditingController();
-  final  passwordController = TextEditingController();
+
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
 
   Timer? _timer;
 

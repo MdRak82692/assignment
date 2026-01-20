@@ -5,7 +5,8 @@ import 'package:assignment/core/common/image_widget.dart';
 import 'package:assignment/core/utils/constants/app_colors.dart';
 import 'package:assignment/core/utils/constants/app_sizer.dart';
 import 'package:assignment/core/utils/constants/logo_path.dart';
-import 'package:assignment/features/home/controller/login_controller.dart';
+import 'package:assignment/features/auth/controller/login_controller.dart';
+import 'package:assignment/features/home/presentation/screen/home_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -23,7 +24,6 @@ class LoginScreen extends StatelessWidget {
       body: Obx(
         () => Stack(
           children: [
-            // Logo and Title Section - Always stays on top
             Positioned(
               top: 0,
               left: 0,
@@ -55,16 +55,15 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
 
-            // Login Form Section - Slides up from bottom
             AnimatedPositioned(
-              duration: const Duration(milliseconds: 500),
+              duration: Duration(milliseconds: 1000),
               curve: Curves.easeOut,
               bottom: controller.showLogin.value ? 0 : -600.h,
               left: 0,
               right: 0,
               child: Container(
                 width: double.infinity,
-                height: 500.h, // Adjust height as needed
+                height: 500.h,
                 decoration: BoxDecoration(
                   color: AppColors.white,
                   borderRadius: BorderRadius.only(
@@ -124,7 +123,9 @@ class LoginScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 20.h),
                       CustomButton(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => HomeScreen());
+                        },
                         title: 'Login',
                         buttonColor: AppColors.primaryBackground,
                         buttonTextColor: AppColors.white,

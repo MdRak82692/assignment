@@ -1,8 +1,9 @@
-import 'package:assignment/core/utils/constants/app_colors.dart';
+import 'package:assignment/core/utils/constants/icon_path.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:assignment/core/utils/constants/app_sizer.dart';
 import 'custom_text.dart';
+import 'image_widget.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -40,7 +41,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     child: Icon(
                       Icons.arrow_back,
                       size: 24.sp,
-                      color: AppColors.textSecondary,
+                      color: Color(0xFF04063E),
                     ),
                   ),
                 )
@@ -49,11 +50,22 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             padding: EdgeInsets.only(top: 8.h),
             child: CustomText(
               text: title,
-              fontSize: 18.sp,
+              fontSize: 16.sp,
               fontWeight: FontWeight.w500,
               textOverflow: TextOverflow.ellipsis,
+              color: Color(0xFF04063E),
             ),
           ),
+          actions: [
+            Padding(
+              padding: EdgeInsets.only(right: 24.w, top: 12.h),
+              child: ImageWidget(
+                image: IconPath.bell,
+                height: 20.h,
+                width: 20.w,
+              ),
+            ),
+          ],
         ),
       ),
     );

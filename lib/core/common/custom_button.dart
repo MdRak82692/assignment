@@ -7,12 +7,12 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
     required this.onTap,
-    this.buttonColor = AppColors.primary,
-    this.buttonTextColor = AppColors.primary,
+    this.buttonColor = AppColors.primaryBackground,
+    this.buttonTextColor = AppColors.primaryBackground,
     required this.title,
     this.borderColor,
     this.isIcon = true,
-    this.iconColor = AppColors.primary,
+    this.iconColor = AppColors.white,
     this.radius,
     this.height,
     this.vertical,
@@ -37,7 +37,9 @@ class CustomButton extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: buttonColor is Gradient ? buttonColor : null,
           // Use gradient if provided
-          color: buttonColor is Color ? buttonColor : AppColors.primary,
+          color: buttonColor is Color
+              ? buttonColor
+              : AppColors.primaryBackground,
           // Default color if no gradient is passed
           borderRadius: BorderRadius.circular(radius ?? 12.h),
           border: Border.all(
@@ -54,13 +56,13 @@ class CustomButton extends StatelessWidget {
                 text: title,
                 color: buttonTextColor,
                 fontWeight: FontWeight.w600,
-                fontSize:fontSize?? 16.sp,
+                fontSize: fontSize ?? 16.sp,
                 height: 22.h / 16.h,
                 letterSpacing: -0.6.h,
               ),
               if (isIcon == false) ...[
-                SizedBox(width: 12.w),
-                Icon(Icons.arrow_forward, size: 20.sp, color: iconColor),
+                SizedBox(width: 10.w),
+                Icon(Icons.arrow_forward_ios, size: 20.sp, color: iconColor),
               ],
             ],
           ),
