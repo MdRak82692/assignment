@@ -5,7 +5,7 @@ class IconPath {
   static const String liveACPower = '$_basePath/liveACPower.png';
   static const String plantGeneration = '$_basePath/plantGeneration.png';
   static const String livePR = '$_basePath/livePR.png';
-  static const String cumulativePR = '$_basePath/bcumulativePRell.png';
+  static const String cumulativePR = '$_basePath/cumulativePR.png';
   static const String returnPV = '$_basePath/returnPV.png';
   static const String bell = '$_basePath/bell.png';
   static const String tempThree = '$_basePath/temp_three.png';
@@ -14,4 +14,14 @@ class IconPath {
   static const String moon = '$_basePath/moon.png';
   static const String tempOne = '$_basePath/temp_one.png';
   static const String tempTwo = '$_basePath/temp_two.png';
+  static const String date = '$_basePath/date.png';
+  static const String live = '$_basePath/live.png';
+  static const String meter = '$_basePath/meter.png';
+  static const String today = '$_basePath/today.png';
+  static const String ac = '$_basePath/ac.png';
+  static const String lifetime = '$_basePath/lifetime.png';
+  static const String solar = '$_basePath/solar.png';
+  static const String dc = '$_basePath/dc.png';
+  static const String inverter = '$_basePath/inverter.png';
+  static const String light = '$_basePath/light.png';
 }
