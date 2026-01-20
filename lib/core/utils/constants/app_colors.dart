@@ -7,10 +7,9 @@ class AppColors {
   static const Color primary = Color(0xFFE9661D);
   //static Color secondary = Color(0xFF1BBFDC);
 
-
   // Added by Shahriar
-  static const Color textPrimary = Color(0xFF111111);
-  static const Color textSecondary = Color(0xFF747474);
+  static const Color textPrimary = Color(0xFF082438);
+  static const Color textSecondary = Color(0XFF5E5E5E);
   static const Color textBold = Color(0xff091824);
   static const Color textGrey = Color(0xff9597A6);
   static const Color textWhite = Color(0xFFFFFFFF);
@@ -19,8 +18,6 @@ class AppColors {
   static const Color textGrayBlue = Color(0xFF75759E);
   static const Color containerBorder = Color(0xFFE7EAF2);
   static const Color scaffoldColor = Color(0xFFe7e7e7);
-
-
 
   // Background Colors
   static const Color backgroundLight = Color(0xFFF9FAFB);
@@ -43,6 +40,7 @@ class AppColors {
   static const Color warning = Color(0xFFFFA726);
   static const Color error = Color(0xFFF44336);
   static const Color info = Color(0xFF29B6F6);
+
   /// textformfield border color
 
   static const Color textFormFieldBorder = Color(0xFFD9D9D9);
